@@ -2,6 +2,7 @@ require: rubocop-rails
 
 AllCops:
   # 除外するディレクトリ（自動生成されるファイル）
+  SuggestExtensions: false
   Exclude:
     - "vendor/**/*"
     - "db/**/*"
