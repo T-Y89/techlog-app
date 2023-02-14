@@ -1,18 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe "Home", type: :system do
+RSpec.describe 'Home', type: :system do
   before do
     driven_by(:rack_test)
     # driven_by :selenium_chrome_headless
   end
 
-  describe "トップページに遷移した時に" do
+  describe 'トップページに遷移した時に' do
     it 'Home#top という文字列が表示される' do
       visit '/'
       expect(page).to have_content('Home#top')
     end
-
   end
-
-
 end
