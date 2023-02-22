@@ -28,5 +28,6 @@ jobs:
     - name: Set up Ruby2
       run: |
         bundle install
+        bundle exec rake assets:precompile
         bundle lock --add-platform x86_64-linux
         bundle exec rspec
