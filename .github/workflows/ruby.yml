@@ -28,4 +28,5 @@ jobs:
     - name: Set up Ruby2
       run: |
         bundle lock --add-platform x86_64-linux
+        bundle install
         bundle exec rspec
