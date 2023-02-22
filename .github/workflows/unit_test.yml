@@ -30,4 +30,6 @@ jobs:
         bundle install
         bundle exec rake assets:precompile
         bundle lock --add-platform x86_64-linux
-        bundle exec rspec
+    - name: execute request=spec
+      run: |
+        bundle exec rspec spec/requests
