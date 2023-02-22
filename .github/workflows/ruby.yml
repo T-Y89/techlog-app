@@ -27,6 +27,6 @@ jobs:
       #   bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Set up Ruby2
       run: |
-        bundle lock --add-platform x86_64-linux
         bundle install
+        bundle lock --add-platform x86_64-linux
         bundle exec rspec
