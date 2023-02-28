@@ -26,6 +26,7 @@ RSpec.describe "Users", type: :system do
         expect(current_path).to eq('/')
       end
     end
+
     context "異常系" do
       context 'ニックネームが空白の場合' do
         let(:nickname) { '' }
@@ -74,18 +75,13 @@ RSpec.describe "Users", type: :system do
       end
 
       context 'passwordとpassword_confirmationが一致しない場合' do
-        let(:password_confirmation) { "#{password}hoge" } 
+        let(:password_confirmation) { "#{password}hoge" }
         it 'ユーザーを作成せず、エラーメッセージを表示する' do
           expect { subject }.not_to change(User, :count)
           expect(page).to have_content("Password confirmation doesn't match Password")
         end
       end
-
-
+      
     end
-
-
   end
-
-
 end
